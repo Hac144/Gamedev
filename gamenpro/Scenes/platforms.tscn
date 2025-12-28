@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1ody0punu250"]
+
+[ext_resource type="Texture2D" uid="uid://bd723bv5wyah7" path="res://Assests/sprites/platforms.png" id="1_o20dk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtyfn"]
+size = Vector2(31, 9)
+
+[node name="platforms" type="AnimatableBody2D"]
+position = Vector2(3, -3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 4)
+texture = ExtResource("1_o20dk")
+region_enabled = true
+region_rect = Rect2(17, 1, 31, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 3.5)
+shape = SubResource("RectangleShape2D_wtyfn")
